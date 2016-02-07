@@ -25,7 +25,17 @@ SECRET_KEY = 'm_*#^bd@^6=#_1p#72yccx%%!_)@$r72uc9v0#(3j=k*t_6&id'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+
+TEMPLATE_DEBUG = DEBUG
+
+# Needed when DEBUG=False
+ALLOWED_HOSTS = ['54.148.9.1', 
+                 "ec2-54-148-9-1.us-west-2.compute.amazonaws.com",
+                 ".ndrini.eu",
+                 "list.ndrini.eu",
+                 "superlist-staging.ndrini.eu", 
+                 ".aing.biz",   
+                ]
 
 
 # Application definition
@@ -101,4 +111,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.abspath(os.path.join(BASE_DIR, '../static'))
+STATIC_ROOT = os.path.abspath(os.path.join(BASE_DIR, '../../static'))
